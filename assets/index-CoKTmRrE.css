@@ -24,3 +24,25 @@
     width: 100% !important;
   }
 }
+/* 添加地址样式 - PC版 */
+.contact-info::after,
+[class*="contact"]::after,
+footer .contact::after {
+  content: "📍 6160 Florin Road Ste B, Sacramento, CA 95823";
+  display: inline;
+  margin-left: 20px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* 手机版地址换行 */
+@media (max-width: 768px) {
+  .contact-info::after,
+  [class*="contact"]::after,
+  footer .contact::after {
+    display: block;
+    margin-left: 0;
+    margin-top: 10px;
+    text-align: center;
+  }
+}
